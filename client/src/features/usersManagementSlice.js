@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-
 export const updateUserData = createAsyncThunk(
   "userManagement/updateUserData",
   async (user) => {
@@ -188,10 +187,13 @@ const userManagementSlice = createSlice({
       return { ...state, uploadImage: payload };
     },
     [fetchUsers.fulfilled]: (state, { payload }) => {
-      if(payload?.code){
-        return {...state, users:'Ups! Error occured. Please try again later'}
-      }else{
-        return { ...state, users: payload};
+      if (payload?.code) {
+        return {
+          ...state,
+          users: "Ups! Error occured. Please try again later",
+        };
+      } else {
+        return { ...state, users: payload };
       }
     },
     [createUser.fulfilled]: (state, { payload }) => {
@@ -237,8 +239,6 @@ export const getAssignRoleModalStatus = (state) =>
   state.userManagement.assignRoleModal;
 export const getAssignRoleStatus = (state) => state.userManagement.assignRole;
 export const getUserProfile = (state) => state.userManagement.userProfile;
-
-
 
 export const {
   setEditUserProfileForm,

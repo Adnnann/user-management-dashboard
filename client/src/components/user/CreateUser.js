@@ -16,7 +16,7 @@ import {
   Typography,
   Icon,
   Grid,
-  Tooltip
+  Tooltip,
 } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import TextFieldsGenerator from "../utils/TextFieldsGenerator";
@@ -40,22 +40,6 @@ const useStyles = makeStyles((theme) => ({
     verticalAlign: "middle",
     fontSize: "18px",
   },
-  title: {
-    marginTop: theme.spacing(2),
-    color: theme.palette.openTitle,
-    [theme.breakpoints.only("xs")]: {
-      marginTop: theme.spacing(0),
-    },
-  },
-  textField: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1),
-    width: 300,
-    [theme.breakpoints.only("xs")]: {
-      margin: theme.spacing(2),
-      maxWidth: 220,
-    },
-  },
   submit: {
     margin: "auto !important",
     marginBottom: theme.spacing(2),
@@ -63,37 +47,11 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: theme.spacing(0),
     },
   },
-  hasAccount: {
-    margin: "auto",
-    marginBottom: theme.spacing(1),
-    marginRight: "0",
-    [theme.breakpoints.only("xs")]: {
-      marginLeft: "30px",
-    },
-  },
-  signin: {
-    margin: "auto",
-    marginBottom: theme.spacing(1),
-  },
-  signUpForMentorAccount: {
-    color: "green",
-  },
-  largeScreens: {
-    [theme.breakpoints.only("xs")]: {
-      display: "none",
-    },
-  },
-  smallScreens: {
-    [theme.breakpoints.up("md")]: {
-      display: "none",
-    },
-  },
-  mentorAccount: {
-    fontSize: "14px",
-    fontWeight: "bold",
-  },
   textFields: {
     minWidth: "320px",
+  },
+  closeIcon: {
+    textAlign: "right",
   },
 }));
 const CreateUser = () => {
@@ -196,31 +154,29 @@ const CreateUser = () => {
       open: false,
       error: "",
     });
-    navigate('/')
-  }
+    navigate("/");
+  };
 
   return (
     <Card className={classes.card}>
-      <div style={{ textAlign:"right",}}>
+      <div className={classes.closeIcon}>
         <Tooltip title="Close window">
-              <CloseIcon
-                fontSize="small"
-                onClick={navigateToDashboard}
-                style={{
-                  fontSize:'30px',
-                  color:'red',
-                  marginLeft: "auto",
-                  marginTop: "10px",
-                  marginRight: "10px",
-                }}
-              />
-            </Tooltip>
-        </div>
-    
+          <CloseIcon
+            fontSize="small"
+            onClick={navigateToDashboard}
+            style={{
+              fontSize: "30px",
+              color: "red",
+              marginLeft: "auto",
+              marginTop: "10px",
+              marginRight: "10px",
+            }}
+          />
+        </Tooltip>
+      </div>
+
       <Grid container justifyContent="center">
-    
         <CardContent>
-  
           <h1>Create User</h1>
           <Grid item xs={12} md={12} lg={12} xl={12}>
             <TextFieldsGenerator

@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Typography, AppBar, Toolbar } from "@mui/material";
+import { Grid, Typography, Toolbar } from "@mui/material";
 import Search from "../utils/Search";
 import { makeStyles } from "@mui/styles";
 
@@ -34,8 +34,16 @@ const Header = () => {
   const classes = useStyles();
 
   return (
-    <div style={{position:'static', backgroundColor:"#2e355b", fontWeight:"bolder", color:"whitesmoke", paddingBottom:'20px'}}>
-    {/* //<AppBar position="static" className={classes.headerContainer}> */}
+    <div
+      style={{
+        position: "static",
+        backgroundColor: "#2e355b",
+        fontWeight: "bolder",
+        color: "whitesmoke",
+        paddingBottom: "20px",
+      }}
+    >
+      {/* //<AppBar position="static" className={classes.headerContainer}> */}
       <Toolbar>
         <Grid container justifyContent="center">
           <Grid item xs={12} md={4} lg={3} xl={3}>
@@ -48,8 +56,8 @@ const Header = () => {
           </Grid>
         </Grid>
       </Toolbar>
-   {/* // </AppBar> */}
-   </div>
+      {/* // </AppBar> */}
+    </div>
   );
 };
 

@@ -88,7 +88,7 @@ const getUsers = (req, res) => {
                     item.firstName.toLowerCase()
                   ).includes(req.body.filterTerm))) ||
               (item.status === "active" &&
-                item.email.toLowerCase() === req.body.filterTerm)
+                item.email.toLowerCase().includes(req.body.filterTerm))
           )
           .slice(req.body.firstValue, req.body.lastValue)
       : req.body.role && req.body.accountStatus

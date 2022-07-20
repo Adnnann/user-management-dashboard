@@ -26,10 +26,6 @@ const useStyles = makeStyles((theme) => ({
     verticalAlign: "middle",
     fontSize: "18px",
   },
-  tittle: {
-    marginTop: theme.spacing(2),
-    color: theme.palette.openTitle,
-  },
   textField: {
     marginLeft: theme.spacing(1),
     marginRight: theme.spacing(1),

@@ -57,10 +57,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     minWidth: "120px",
   },
-  signin: {
-    margin: "auto",
-    marginBottom: theme.spacing(1),
-  },
   userImagePlaceholder: {
     width: 130,
     marginTop: "20px",

@@ -13,7 +13,7 @@ import {
   setAssignRoleModal,
   setUserToView,
 } from "../../features/usersManagementSlice";
-import { Grid, Checkbox, Tooltip, Button, useMediaQuery } from "@mui/material";
+import { Grid, Tooltip, Button, useMediaQuery } from "@mui/material";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import DeleteIcon from "@mui/icons-material/Delete";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
