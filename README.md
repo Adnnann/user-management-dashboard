@@ -1,6 +1,6 @@
 # Description
 
-This app is my implementation of user management dashboard. Dashboard enables user to view, add, edit, and delete user. All users are displayed in table and user can filter and sort data. For displaying of users pagination is utilized and 10 users are return from the server on every page.
+This app is my implementation of user management dashboard. Dashboard enables user to view, add, edit, and delete user. All users are displayed in table and user can filter and sort data. For displaying of users pagination is utilized and 10 users are returned from the server on each page.
 
 In case if dashboard is included in any app req to the server should be accessible only by user with role admin, and also validation should be done on front-end where route in Main router should only be accessible for admins.
 
